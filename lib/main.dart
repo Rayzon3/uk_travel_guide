@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
       // theme: ThemeData(
       //   primarySwatch: Colors.red,
       // ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -31,14 +32,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      //we will put stuff here that needs to be executed first
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +56,63 @@ class _MyHomePageState extends State<MyHomePage> {
                 primary: const Color(0xffEFEAEA),
                 onPrimary: const Color(0xffE76D0A)),
           ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () =>
+                Fluttertoast.showToast(msg: "Button Pressed", fontSize: 18),
+            child: const Text("Adventure Guide"),
+            style: ElevatedButton.styleFrom(
+                minimumSize: const Size(280, 80),
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                ),
+                primary: const Color(0xffEFEAEA),
+                onPrimary: const Color(0xffE76D0A)),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () =>
+                Fluttertoast.showToast(msg: "Button Pressed", fontSize: 18),
+            child: const Text("Sceneric Spots"),
+            style: ElevatedButton.styleFrom(
+                minimumSize: const Size(280, 80),
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                ),
+                primary: const Color(0xffEFEAEA),
+                onPrimary: const Color(0xffE76D0A)),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () =>
+                Fluttertoast.showToast(msg: "Button Pressed", fontSize: 18),
+            child: const Text("Check Available Hotels"),
+            style: ElevatedButton.styleFrom(
+                minimumSize: const Size(280, 80),
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                ),
+                primary: const Color(0xffEFEAEA),
+                onPrimary: const Color(0xffE76D0A)),
+          ),
+          const SizedBox(height: 20),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
+        selectedItemColor: const Color(0xffE76D0A),
+        unselectedItemColor: const Color.fromARGB(255, 235, 173, 123),
+        // currentIndex: currentIndex,
+        // onTap: (index) => setState(() => currentIndex = index),
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_box_rounded),
+              label: "AR View",
+              backgroundColor: Color(0xffF0F0F0)),
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.),
+              label: "Find a ride",
+              backgroundColor: Color(0xffF0F0F0))
         ],
       ),
     );
