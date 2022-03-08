@@ -110,9 +110,9 @@ class _MyHomePageState extends State<MyHomePage> {
               label: "AR View",
               backgroundColor: Color(0xffF0F0F0)),
           BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.),
-              label: "Find a ride",
-              backgroundColor: Color(0xffF0F0F0))
+              icon: Icon(Icons.add_box_rounded),
+              label: "SOS",
+              backgroundColor: Color(0xffF0F0F0)),
         ],
       ),
     );
