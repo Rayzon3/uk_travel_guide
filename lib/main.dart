@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,14 +43,27 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Uttarakhand Tourist Guide"),
+        title: const Text("Uttarakhand Tourist Guide"),
         centerTitle: true,
         backgroundColor: const Color(0xffE76D0A),
       ),
       backgroundColor: const Color(0xffF0F0F0),
       body: ListView(
         padding: const EdgeInsets.all(16),
-        children: [],
+        children: <Widget>[
+          ElevatedButton(
+            onPressed: () =>
+                Fluttertoast.showToast(msg: "Button Pressed", fontSize: 18),
+            child: const Text("4 Dham Yatra Guide"),
+            style: ElevatedButton.styleFrom(
+                minimumSize: const Size(280, 80),
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                ),
+                primary: const Color(0xffEFEAEA),
+                onPrimary: const Color(0xffE76D0A)),
+          ),
+        ],
       ),
     );
   }
