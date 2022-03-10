@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:heroicons/heroicons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,11 +107,15 @@ class _MyHomePageState extends State<MyHomePage> {
         // onTap: (index) => setState(() => currentIndex = index),
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(Icons.add_box_rounded),
+              icon: HeroIcon(HeroIcons.camera),
               label: "AR View",
               backgroundColor: Color(0xffF0F0F0)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.add_box_rounded),
+              icon: HeroIcon(HeroIcons.locationMarker),
+              label: "Explore",
+              backgroundColor: Color(0xffF0F0F0)),
+          BottomNavigationBarItem(
+              icon: HeroIcon(HeroIcons.exclamationCircle),
               label: "SOS",
               backgroundColor: Color(0xffF0F0F0)),
         ],
