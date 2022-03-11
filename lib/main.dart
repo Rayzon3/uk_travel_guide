@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:heroicons/heroicons.dart';
 
 void main() {
@@ -33,14 +32,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Uttarakhand Tourist Guide"),
-        centerTitle: true,
-        backgroundColor: const Color(0xffE76D0A),
-      ),
+  int currentIndex = 0;
+
+  final pages = [
+    Scaffold(
       backgroundColor: const Color(0xffF0F0F0),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -99,13 +94,42 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 20),
         ],
       ),
+    ),
+    const Scaffold(
+      backgroundColor: Color(0xffF0F0F0),
+      body: Text("This will be AR View!"),
+    ),
+    const Scaffold(
+      backgroundColor: Color(0xffF0F0F0),
+      body: Text("This will be Explore View!"),
+    ),
+    const Scaffold(
+      backgroundColor: Color(0xffF0F0F0),
+      body: Text("This will be SOS Page!"),
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Uttarakhand Tourist Guide"),
+        centerTitle: true,
+        backgroundColor: const Color(0xffE76D0A),
+      ),
+      backgroundColor: const Color(0xffF0F0F0),
+      body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
         selectedItemColor: const Color(0xffE76D0A),
         unselectedItemColor: const Color.fromARGB(255, 235, 173, 123),
-        // currentIndex: currentIndex,
-        // onTap: (index) => setState(() => currentIndex = index),
+        currentIndex: currentIndex,
+        onTap: (index) => setState(() => currentIndex = index),
         items: const [
+          BottomNavigationBarItem(
+              icon: HeroIcon(HeroIcons.home),
+              label: "Home",
+              backgroundColor: Color(0xffF0F0F0)),
           BottomNavigationBarItem(
               icon: HeroIcon(HeroIcons.camera),
               label: "AR View",
