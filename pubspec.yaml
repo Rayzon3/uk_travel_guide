@@ -32,6 +32,7 @@ dependencies:
   fluttertoast: ^8.0.9
   font_awesome_flutter: ^9.2.0
   heroicons: ^0.4.0
+  flutter_svg: ^0.23.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -59,6 +60,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  assets:
+    - 'assests/images/mountain.png'
+    - 'assests/images/uttarakhand-logo-english.png'
 
   # To add assets to your application, add an assets section, like this:
   # assets:
