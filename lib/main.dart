@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:heroicons/heroicons.dart';
+import 'package:uk_travel_guide/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   primarySwatch: Colors.red,
       // ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Splash(),
       debugShowCheckedModeBanner: false,
     );
   }
