@@ -99,9 +99,11 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Color(0xffF0F0F0),
       body: Text("This will be AR View!"),
     ),
-    const Scaffold(
-      backgroundColor: Color(0xffF0F0F0),
-      body: Text("This will be Explore View!"),
+    Scaffold(
+      backgroundColor: const Color(0xffF0F0F0),
+      body: Center(
+        child: Image.asset("assets/images/art.png"),
+      ),
     ),
     const Scaffold(
       backgroundColor: Color(0xffF0F0F0),
