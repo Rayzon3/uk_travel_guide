@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:heroicons/heroicons.dart';
+import 'sos.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -84,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
     const Scaffold(
       backgroundColor: Color(0xffF0F0F0),
-      body: Text("This will be SOS Page!"),
+      body: SosPage(),
     ),
   ];
 
