@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:heroicons/heroicons.dart';
 import 'sos.dart';
+import 'explore.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -79,9 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Color(0xffF0F0F0),
       body: Text("This will be AR View!"),
     ),
-    const Scaffold(
+    Scaffold(
       backgroundColor: Color(0xffF0F0F0),
-      body: Text("This will be Explore View!"),
+      body: ExplorePage(),
     ),
     const Scaffold(
       backgroundColor: Color(0xffF0F0F0),
